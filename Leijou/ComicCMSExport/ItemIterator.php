@@ -1,7 +1,7 @@
 <?php
 namespace Leijou\ComicCMSExport;
 
-abstract class ItemIterator implements \SeekableIterator
+abstract class ItemIterator implements \SeekableIterator, \Countable
 {
     protected $comiccms;
     protected $position = 0;
@@ -86,5 +86,10 @@ abstract class ItemIterator implements \SeekableIterator
     public function seek($position)
     {
         $this->position = $position;
+    }
+
+    public function count()
+    {
+        return count($this->contents);
     }
 }
