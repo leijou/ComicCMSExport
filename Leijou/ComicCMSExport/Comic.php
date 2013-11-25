@@ -9,7 +9,8 @@ class Comic extends Item
     public $id;
 
     /**
-     * @var int Unix timestamp of when this News post was added to the site
+     * @var \DateTime Time when this Comic was added to the site
+     * This may be in the future for queued comics, or may be null for drafts
      */
     public $timestamp;
 

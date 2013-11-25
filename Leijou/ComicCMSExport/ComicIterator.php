@@ -31,6 +31,7 @@ class ComicIterator extends SplitFileIterator
             $comic->$key = $value;
         }
 
+        $comic->timestamp = \DateTime::createFromFormat('U', $comic->timestamp);
         $comic->filepath = $this->comiccms->comicimgpath.'/'.$comic->id.'.'.$comic->ext;
 
         return $comic;

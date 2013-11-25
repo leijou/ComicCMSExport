@@ -25,6 +25,8 @@ class NewsIterator extends SplitFileIterator
             $news->$key = $value;
         }
 
+        $news->timestamp = \DateTime::createFromFormat('U', $news->timestamp);
+
         return $news;
     }
 }
