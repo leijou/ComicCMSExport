@@ -69,7 +69,7 @@ class ComicCMS
                     }
                     break;
                 case 'storedarray':
-                    $result[$name] = (rtrim($line)?$this->destorify(unserialize(rtrim($result[$name]))):array());
+                    $result[$name] = (rtrim($result[$name])?$this->destorify(unserialize(rtrim($result[$name]))):array());
                     // Also carry on to ensure array and destorify
                 case 'array':
                     if (!is_array($result[$name])) {
