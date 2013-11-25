@@ -1,7 +1,7 @@
 <?php
 namespace Leijou\ComicCMSExport;
 
-class UserIterator extends SplitFileIterator
+class UserIterator extends PrivateFileIterator
 {
     protected $storagepath = '/private/users.php';
 
