@@ -9,7 +9,7 @@ abstract class PrivateFileIterator extends ItemIterator
 
     protected function populateContents()
     {
-        $this->file = new \SplFileObject($this->env->storagepath.$this->storagepath, 'r');
+        $this->file = new \SplFileObject($this->comiccms->storagepath.$this->storagepath, 'r');
 
         // Private files start on line 1
         $id = 0;

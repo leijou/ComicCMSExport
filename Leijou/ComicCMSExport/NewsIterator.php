@@ -11,7 +11,20 @@ class NewsIterator extends SplitFileIterator
         $news = new News;
         $news->id = $id;
 
-        // TODO
+        $assoc = $this->comiccms->lineToData(
+            $line,
+            array(
+                'timestamp'=>'int',
+                'title'=>'string',
+                'author'=>'int',
+                'post'=>'string',
+            )
+        );
+
+        foreach ($assoc as $key => $value) {
+            $news->$key = $value;
+        }
+
         return $news;
     }
 }

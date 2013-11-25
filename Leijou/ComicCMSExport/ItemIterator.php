@@ -3,14 +3,14 @@ namespace Leijou\ComicCMSExport;
 
 abstract class ItemIterator implements \SeekableIterator
 {
-    protected $env;
+    protected $comiccms;
     protected $position = 0;
     protected $contents = array();
 
-    public function __construct(Environment $env)
+    public function __construct(ComicCMS $comiccms)
     {
-        $this->env = $env;
-        $this->env->test();
+        $this->comiccms = $comiccms;
+        $this->comiccms->test();
 
         $this->populateContents();
     }

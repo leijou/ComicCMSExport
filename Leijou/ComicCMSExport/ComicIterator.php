@@ -11,9 +11,27 @@ class ComicIterator extends SplitFileIterator
         $comic = new Comic;
         $comic->id = $id;
 
-        // TODO
+        $assoc = $this->comiccms->lineToData(
+            $line,
+            array(
+                'timestamp'=>'int',
+                'title'=>'string',
+                'author'=>'int',
+                'ext'=>'string',
+                'width'=>'int',
+                'height'=>'int',
+                'tagline'=>'string',
+                'blurb'=>'string',
+                'news'=>'array',
+                'tag'=>'array',
+            )
+        );
 
-        $comic->filepath = $this->env->comicimgpath.'/'.$comic->id.'.'.$comic->ext;
+        foreach ($assoc as $key => $value) {
+            $comic->$key = $value;
+        }
+
+        $comic->filepath = $this->comiccms->comicimgpath.'/'.$comic->id.'.'.$comic->ext;
 
         return $comic;
     }

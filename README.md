@@ -16,12 +16,12 @@ not contain namespaces).
 
 Usage
 -----
-An `Environment` object must be constructed and passed to the other classes. Once created it can
+A `ComicCMS` object must be constructed and passed to the other classes. Once created it can
 be re-used for all iterators.
 
 ```php
-$environment = new \Leijou\ComicCMSExport\Environment('/absolute/path/to/comiccms');
-$comics = new \Leijou\ComicCMSExport\ComicIterator($environment);
+$comiccms = new \Leijou\ComicCMSExport\ComicCMS('/absolute/path/to/comiccms');
+$comics = new \Leijou\ComicCMSExport\ComicIterator($comiccms);
 foreach ($comics as $comic) {
     // ...
 }

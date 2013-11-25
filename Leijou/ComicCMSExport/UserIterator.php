@@ -10,7 +10,22 @@ class UserIterator extends PrivateFileIterator
         $user = new User;
         $user->id = $id;
 
-        // TODO
+        $assoc = $this->comiccms->lineToData(
+            $line,
+            array(
+                'session'=>'string',
+                'ip'=>'string',
+                'group'=>'int',
+                'name'=>'string',
+                'password'=>'string',
+                'email'=>'string',
+            )
+        );
+
+        foreach ($assoc as $key => $value) {
+            $user->$key = $value;
+        }
+
         return $user;
     }
 }

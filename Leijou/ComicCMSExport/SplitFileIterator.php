@@ -18,7 +18,7 @@ abstract class SplitFileIterator extends ItemIterator
         $this->filestart = $min;
         $this->fileend = $max;
 
-        $filename = $this->env->storagepath.$this->storagepath.'/'.$min.'-'.$max;
+        $filename = $this->comiccms->storagepath.$this->storagepath.'/'.$min.'-'.$max;
         if (!file_exists($filename)) {
             throw new \OutOfBoundsException('Unknown item ID ('.$this->position.')');
         }
