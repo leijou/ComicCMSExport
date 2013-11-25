@@ -12,7 +12,7 @@ abstract class SplitFileIterator extends ItemIterator
 
     protected function loadItemFile($id)
     {
-        $min = floor($this->position / $this->storageitems);
+        $min = (floor($id / $this->storageitems) * $this->storageitems) + 1;
         $max = $min + $this->storageitems - 1;
 
         $this->filestart = $min;
