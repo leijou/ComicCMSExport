@@ -10,6 +10,7 @@ abstract class ItemIterator implements \SeekableIterator
     public function __construct(Environment $env)
     {
         $this->env = $env;
+        $this->env->test();
 
         $this->populateContents();
     }
