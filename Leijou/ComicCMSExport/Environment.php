@@ -17,19 +17,19 @@ class Environment
     public function test()
     {
         if (!is_dir($this->basepath)) {
-            throw new \RuntimeError('ComicCMS directory does not exist: '.$this->basepath);
+            throw new \RuntimeException('ComicCMS directory does not exist: '.$this->basepath);
         }
 
         if (!is_dir($this->storagepath)) {
-            throw new \RuntimeError('ComicCMS storage directory does not exist: '.$this->storagepath);
+            throw new \RuntimeException('ComicCMS storage directory does not exist: '.$this->storagepath);
         }
 
         if (!is_file($this->storagepath.'/dbversion')) {
-            throw new \RuntimeError('ComicCMS version information is missing');
+            throw new \RuntimeException('ComicCMS version information is missing');
         }
 
         if (((int) file_get_contents($this->storagepath.'/dbversion')) < 4) {
-            throw new \RuntimeError('ComicCMS version is too old. Please upgrade ComicCMS before exporting');
+            throw new \RuntimeException('ComicCMS version is too old. Please upgrade ComicCMS before exporting');
         }
     }
 }
