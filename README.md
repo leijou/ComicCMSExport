@@ -2,10 +2,7 @@ ComicCMS Exporter
 =================
 Classes to handle the export of ComicCMS data without the need to dive in to its source code.
 
-Currently in development. TODO:
-- Queued Comics
-- Queued News
-- Single-file, PHP 5.1 version
+Currently in development.
 
 Requirements
 ------------
@@ -43,6 +40,10 @@ Each are constructed by its own Iterator:
 `NewsIterator`
 `UserIterator`
 `UserGroupIterator`
+
+Additionaly there are two iterators for queued/draft items:
+`QueuedComicIterator`
+`QueuedNewsIterator`
 
 Internals
 ---------
