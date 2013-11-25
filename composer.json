@@ -3,6 +3,7 @@
     "description": "A library for the export of ComicCMS user data",
     "keywords": ["comiccms"],
     "homepage": "https://github.com/leijou/ComicCMSExport",
+    "license": "MIT",
     "autoload": {
         "psr-0": {
             "Leijou\\ComicCMSExport\\": ""
