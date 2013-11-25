@@ -1,0 +1,11 @@
+{
+    "name": "leijou/comiccms-export",
+    "description": "A library for the export of ComicCMS user data",
+    "keywords": ["comiccms"],
+    "homepage": "https://github.com/leijou/ComicCMSExport",
+    "autoload": {
+        "psr-0": {
+            "Leijou\\ComicCMSExport\\": ""
+        }
+    }
+}
