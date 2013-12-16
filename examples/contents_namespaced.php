@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__).'/comiccmsexport.php');
+require_once(__DIR__.'/../vendor/autoload.php');
 
 header('content-type: text/plain');
 
@@ -16,9 +16,9 @@ echo '-------------------'."\n\n";
 try {
     // A `ComicCMS` object must be constructed and passed to the other classes
     // Once created it can be re-used for all iterators.
-    $comiccms = new ComicCMSExport_ComicCMS($argv[1]);
+    $comiccms = new \Leijou\ComicCMSExport\ComicCMS($argv[1]);
     $comiccms->test();
-} catch (Exception $e) {
+} catch (\Exception $e) {
     echo 'Failed to read ComicCMS directory'."\n";
     echo $e->getMessage()."\n\n";
     echo 'Usage: php '.$argv[0].' <path_to_comiccms>'."\n\n";
@@ -26,7 +26,7 @@ try {
 }
 
 // Fetch all published Comics
-$comics = new ComicCMSExport_ComicIterator($comiccms);
+$comics = new \Leijou\ComicCMSExport\ComicIterator($comiccms);
 echo 'Comics ('.count($comics).')'."\n";
 echo '-------------------'."\n";
 foreach ($comics as $comic) {
@@ -35,7 +35,7 @@ foreach ($comics as $comic) {
 echo "\n";
 
 // Fetch all queued and draft Comics
-$queuedcomics = new ComicCMSExport_QueuedComicIterator($comiccms);
+$queuedcomics = new \Leijou\ComicCMSExport\QueuedComicIterator($comiccms);
 echo 'Queued Comics ('.count($queuedcomics).')'."\n";
 echo '-------------------'."\n";
 foreach ($queuedcomics as $comic) {
@@ -45,7 +45,7 @@ foreach ($queuedcomics as $comic) {
 echo "\n";
 
 // Fetch all published News posts
-$news = new ComicCMSExport_NewsIterator($comiccms);
+$news = new \Leijou\ComicCMSExport\NewsIterator($comiccms);
 echo 'News ('.count($news).')'."\n";
 echo '-------------------'."\n";
 foreach ($news as $post) {
@@ -54,7 +54,7 @@ foreach ($news as $post) {
 echo "\n";
 
 // Fetch all queued and draft News posts
-$queuednews = new ComicCMSExport_QueuedNewsIterator($comiccms);
+$queuednews = new \Leijou\ComicCMSExport\QueuedNewsIterator($comiccms);
 echo 'Queued News ('.count($queuednews).')'."\n";
 echo '-------------------'."\n";
 foreach ($queuednews as $post) {
@@ -64,7 +64,7 @@ foreach ($queuednews as $post) {
 echo "\n";
 
 // Fetch all Users
-$users = new ComicCMSExport_UserIterator($comiccms);
+$users = new \Leijou\ComicCMSExport\UserIterator($comiccms);
 echo 'Users ('.count($users).')'."\n";
 echo '-------------------'."\n";
 foreach ($users as $user) {
@@ -73,7 +73,7 @@ foreach ($users as $user) {
 echo "\n";
 
 // Fetch all UserGroups
-$usergroups = new ComicCMSExport_UserGroupIterator($comiccms);
+$usergroups = new \Leijou\ComicCMSExport\UserGroupIterator($comiccms);
 echo 'User Groups ('.count($usergroups).')'."\n";
 echo '-------------------'."\n";
 foreach ($usergroups as $usergroup) {
