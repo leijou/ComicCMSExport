@@ -23,7 +23,7 @@ choose to use the namespaced version:
 - PHP 5.3
 - [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md) compliant
   autoloader or [Composer](http://getcomposer.org/):
-  [`"leijou/comiccms-export": "dev-master"`](https://packagist.org/packages/leijou/comiccms-export)
+  [`"leijou/comiccms-export": "1.*"`](https://packagist.org/packages/leijou/comiccms-export)
 - A ComicCMS install to point to
 
 The example contents script is also available for this namespaced version:

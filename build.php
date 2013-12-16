@@ -13,6 +13,8 @@ $outfile->fwrite(
 /**
  * This is the ComicCMS data export tool (distributable, PHP 5.2 version)
  *
+ * Version 1.0.0
+ *
  * For information on usage and structured, more readable, source code visit
  * https://github.com/leijou/ComicCMSExport
  */
