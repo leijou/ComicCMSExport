@@ -15,7 +15,7 @@ class Comic extends Item
     public $timestamp;
 
     /**
-     * @var string
+     * @var string Title of the comic
      */
     public $title;
 
@@ -25,27 +25,27 @@ class Comic extends Item
     public $author;
 
     /**
-     * @var string
+     * @var string File extension of the Comic's image file
      */
     public $ext;
 
     /**
-     * @var int
+     * @var int Width in pixels of the Comic's image
      */
     public $width;
 
     /**
-     * @var int
+     * @var int Height in pixels of the Comic's image
      */
     public $height;
 
     /**
-     * @var string
+     * @var string Short tagline of the comic
      */
     public $tagline;
 
     /**
-     * @var string
+     * @var string Long blurb of the comic
      */
     public $blurb;
 

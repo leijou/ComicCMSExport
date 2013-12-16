@@ -9,7 +9,7 @@ class UserGroup extends Item
     public $id;
 
     /**
-     * @var string
+     * @var string Name of the UserGroup
      */
     public $name;
 

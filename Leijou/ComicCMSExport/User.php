@@ -14,20 +14,20 @@ class User extends Item
     public $group;
 
     /**
-     * @var string
+     * @var string Username of the User
      */
     public $name;
 
     /**
      * This is an old and insecure method of storing passwords!
-     * Instead PLEASE use the new password_hash, password_verify, etc. functions
+     * Instead PLEASE use the modern password_hash, password_verify, etc. functions
      * For backwards compatibility: https://github.com/ircmaxell/password_compat
      * @var string Simple hash of the user's password
      */
     public $password;
 
     /**
-     * @var string
+     * @var string Email address of the User (used for gravatar)
      */
     public $email;
 

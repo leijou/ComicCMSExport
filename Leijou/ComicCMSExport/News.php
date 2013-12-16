@@ -15,7 +15,7 @@ class News extends Item
     public $timestamp;
 
     /**
-     * @var string
+     * @var string Title of the News post
      */
     public $title;
 
@@ -25,7 +25,7 @@ class News extends Item
     public $author;
 
     /**
-     * @var string
+     * @var string Content of the News post
      */
     public $post;
 }
